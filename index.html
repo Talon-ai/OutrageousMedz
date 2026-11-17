@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outrageous Medz | Iso-Neon Botanical Lounge & Dispensary</title>
+
+    <!-- FAVICON / SEARCH ENGINE LOGO TAGS -->
+    <link rel="icon" type="image/x-icon" href="Gemini_Generated_Image_9yd4yo9yd4yo9yd4 (1).jpg">
+    <link rel="shortcut icon" href="Gemini_Generated_Image_9yd4yo9yd4yo9yd4 (1).jpg">
+    <link rel="apple-touch-icon" href="Gemini_Generated_Image_9yd4yo9yd4yo9yd4 (1).jpg">
+
+    <!-- GOOGLE FONTS (DISPENSARY & LUXURY TYPOGRAPHY) -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* SIGNATURE OUTRAGEOUS MEDZ NEON PALETTE */
+            --neon-pink: #ff00cc;
+            --hot-pink: #ff1493;
+            --neon-purple: #7029d1;
+            --uv-violet: #4a00e0;
+            --electric-green: #bcff2e;
+            --deep-void: #05030a;
+            --lounge-dark: #0b0716;
+
+            /* ISO-NEON GLASSMORPHISM & ILLUMINATED GLASS-BLOCK SURFACES */
+            --glass-panel: rgba(16, 11, 32, 0.78);
+            --glass-card: rgba(24, 16, 46, 0.64);
+            --glass-card-hover: rgba(36, 24, 68, 0.88);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --glass-border-glow: rgba(188, 255, 46, 0.45);
+            --pink-border-glow: rgba(255, 0, 204, 0.5);
+
+            /* NEON GLOW ELEVATIONS */
+            --glow-green: 0 0 22px rgba(188, 255, 46, 0.35);
+            --glow-pink: 0 0 26px rgba(255, 0, 204, 0.42);
+            --glow-purple: 0 0 38px rgba(112, 41, 209, 0.48);
+
+            /* FUNCTIONAL */
+            --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --text-main: #ffffff;
+            --text-muted: #b5adc9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* MOBILE 67% ZOOM FIT FIX */
+        @media screen and (max-width: 768px) {
+            html {
+                zoom: 67%;
+            }
+        }
+
+        body {
+            background-color: var(--deep-void);
+            background-image:
+                radial-gradient(circle at 12% 18%, rgba(112, 41, 209, 0.32) 0%, transparent 45%),
+                radial-gradient(circle at 88% 30%, rgba(255, 0, 204, 0.22) 0%, transparent 45%),
+                radial-gradient(circle at 50% 88%, rgba(188, 255, 46, 0.14) 0%, transparent 52%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Illuminated Glass-Block Architectural Grid Overlay (Inspired by Physical Store Counter Wall) */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 68px 68px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- TOP BLACK FRIDAY & LOUNGE TICKER --- */
+        .promo-ticker {
+            background: linear-gradient(90deg, var(--neon-purple), var(--hot-pink), var(--neon-purple));
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.72rem;
+            padding: 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 34s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* --- 18+ AGE VERIFICATION GATE --- */
+        #age-gate {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 3, 10, 0.95);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+        }
+
+        .gate-content {
+            text-align: center;
+            max-width: 520px;
+            width: 100%;
+            padding: 45px 30px;
+            background: var(--glass-panel);
+            border-radius: 26px;
+            border: 1px solid var(--glass-border-glow);
+            box-shadow: var(--glow-purple), var(--glow-green);
+        }
+
+        .gate-content h1 {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.6rem, 6vw, 2.35rem);
+            background: linear-gradient(90deg, #fff, var(--electric-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .gate-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gate {
+            flex: 1;
+            min-width: 150px;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, var(--electric-green), #98e600);
+            color: #05030a;
+            border: none;
+            box-shadow: var(--glow-green);
+        }
+
+        .btn-no {
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn-gate:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        /* --- STICKY GLASS NAVIGATION --- */
+        nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 82px;
+            background: rgba(9, 6, 18, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            height: 70px;
+            border-bottom-color: rgba(255, 0, 204, 0.45);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+        }
+
+        .logo {
+            font-family: 'Syncopate', sans-serif;
+            font-size: clamp(0.95rem, 3.5vw, 1.35rem);
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ffffff 0%, var(--neon-pink) 55%, var(--electric-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(12px, 2vw, 24px);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--electric-green);
+            text-shadow: 0 0 12px rgba(188, 255, 46, 0.6);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .btn-login {
+            background: rgba(255, 0, 204, 0.14);
+            border: 1px solid var(--neon-pink);
+            color: #fff;
+            padding: 9px 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.72rem;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-login:hover {
+            background: var(--neon-pink);
+            box-shadow: var(--glow-pink);
+        }
+
+        .cart-trigger {
+            position: relative;
+            cursor: pointer;
+            background: rgba(188, 255, 46, 0.14);
+            border: 1px solid var(--electric-green);
+            color: var(--electric-green);
+            padding: 9px 18px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .cart-trigger:hover {
+            background: var(--electric-green);
+            color: #05030a;
+            box-shadow: var(--glow-green);
+        }
+
+        .cart-count {
+            background: var(--hot-pink);
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 50px;
+        }
+
+        @media (max-width: 950px) {
+            .nav-links { display: none; }
+            nav { padding: 0 4%; }
+        }
+
+        /* --- HERO SECTION (PHYSICAL LOUNGE VIBE & GLASS BLOCKS) --- */
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 6%;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+            width: 100%;
+            max-width: 1420px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(255, 0, 204, 0.16);
+            border: 1px solid var(--neon-pink);
+            color: var(--neon-pink);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            margin-bottom: 20px;
+            box-shadow: var(--glow-pink);
+        }
+
+        .hero h1 {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            font-size: clamp(2.1rem, 5vw, 3.8rem);
+            line-height: 1.12;
+            margin-bottom: 22px;
+            color: #fff;
+            text-shadow: 0 0 32px rgba(112, 41, 209, 0.85);
+        }
+
+        .hero h1 span {
+            color: var(--electric-green);
+            text-shadow: 0 0 25px rgba(188, 255, 46, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.02rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 580px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Physical Lounge Photo Showcase Card (Simulating the Illuminated Glass Block Wall & Counter) */
+        .hero-glass-showcase {
+            background: var(--glass-panel);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--pink-border-glow);
+            border-radius: 28px;
+            padding: 26px;
+            box-shadow: var(--glow-purple), inset 0 0 35px rgba(255, 0, 204, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-badge {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: var(--electric-green);
+            color: #05030a;
+            font-weight: 900;
+            font-size: 0.68rem;
+            padding: 5px 14px;
+            border-radius: 50px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            box-shadow: var(--glow-green);
+            z-index: 3;
+        }
+
+        .store-photo-frame {
+            width: 100%;
+            height: 220px;
+            border-radius: 18px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            border: 1px solid var(--glass-border-glow);
+            position: relative;
+        }
+
+        .store-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1.05) contrast(1.1);
+            transition: transform 0.6s ease;
+        }
+
+        .hero-glass-showcase:hover .store-photo-frame img {
+            transform: scale(1.04);
+        }
+
+        .lounge-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            border-color: var(--electric-green);
+            background: rgba(188, 255, 46, 0.06);
+        }
+
+        .stat-box strong {
+            display: block;
+            font-family: 'Syncopate', sans-serif;
+            color: var(--electric-green);
+            font-size: 0.95rem;
+        }
+
+        .stat-box span {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 980px) {
+            .hero-grid { grid-template-columns: 1fr; }
+        }
+
+        /* --- DELIVERY & ZONE BAR --- */
+        .safety-bar {
+            background: rgba(14, 9, 26, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--glass-border-glow);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 16px 6%;
+            font-weight: 800;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--electric-green);
+        }
+
+        /* --- CATALOG HEADER & STICKY FILTER BAR (INDEX2 ARCHITECTURE) --- */
+        .catalog-header {
+            padding: 75px 6% 25px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .catalog-controls {
+            background: rgba(11, 7, 22, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 20px 6%;
+            position: sticky;
+            top: 70px;
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .search-container {
+            max-width: 820px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 24px;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            outline: none;
+            transition: var(--transition);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-input:focus {
+            border-color: var(--electric-green);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: var(--glow-green);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.72rem;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--neon-pink);
+            color: #fff;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--hot-pink), var(--neon-purple));
+            color: #fff;
+            border-color: transparent;
+            box-shadow: var(--glow-pink);
+        }
+
+        /* --- ORGANIZED CATALOGUE SHELVES (THE 420 DOCTOR DISPENSARY CLARITY + GLASSMORPHISM) --- */
+        .shop-container {
+            padding: 50px 6%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .catalog-section {
+            display: block;
+            margin-bottom: 70px;
+            padding: 36px;
+            background: rgba(16, 11, 30, 0.52);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.48);
+        }
+
+        .catalog-section.hidden {
+            display: none;
+        }
+
+        .shelf-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-subtitle-bar {
+            font-family: 'Syncopate', sans-serif;
+            font-size: clamp(1.15rem, 3vw, 1.55rem);
+            text-align: left;
+            border-left: 4px solid var(--electric-green);
+            padding-left: 16px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .shelf-tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--neon-pink);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+            gap: 28px;
+        }
+
+        /* --- GLASSMORPHIC PRODUCT SHELF CARDS --- */
+        .product-card {
+            background: var(--glass-card);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-radius: 20px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card.hidden {
+            display: none;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            background: var(--glass-card-hover);
+            border-color: var(--electric-green);
+            box-shadow: var(--glow-green), 0 18px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-wrap {
+            width: 100%;
+            height: 215px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(112, 41, 209, 0.35), rgba(255, 0, 204, 0.2));
+            position: relative;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(5, 3, 10, 0.86);
+            backdrop-filter: blur(8px);
+            color: var(--electric-green);
+            border: 1px solid var(--electric-green);
+            padding: 5px 12px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            z-index: 2;
+            border-radius: 50px;
+        }
+
+        .badge.pink {
+            color: var(--neon-pink);
+            border-color: var(--neon-pink);
+        }
+
+        .badge.bf {
+            background: linear-gradient(90deg, var(--hot-pink), var(--neon-purple));
+            color: #fff;
+            border: none;
+            box-shadow: var(--glow-pink);
+        }
+
+        .card-body {
+            padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-category {
+            color: var(--neon-pink);
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .card-title {
+            font-size: 1.18rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        /* Clean "The 420 Doctor" style structured dispensary tier readout */
+        .dispensary-tiers {
+            background: rgba(0, 0, 0, 0.38);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-size: 0.78rem;
+        }
+
+        .tier-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #e2dcf2;
+        }
+
+        .tier-row:last-child {
+            border-bottom: none;
+        }
+
+        .tier-row span:last-child {
+            color: var(--electric-green);
+            font-weight: 800;
+        }
+
+        .btn-add-main {
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--hot-pink), var(--neon-purple));
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: #fff;
+            font-weight: 800;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-top: auto;
+            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.3);
+        }
+
+        .btn-add-main:hover {
+            background: linear-gradient(135deg, var(--electric-green), #98e600);
+            color: #05030a;
+            box-shadow: var(--glow-green);
+        }
+
+        .ref-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.72rem;
+            color: var(--electric-green);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* --- TIER SELECTION MODAL --- */
+        #selection-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 3, 10, 0.9);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            z-index: 4000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .selection-box {
+            background: var(--glass-panel);
+            padding: clamp(24px, 5vw, 40px);
+            border: 1px solid var(--electric-green);
+            width: 100%;
+            max-width: 450px;
+            border-radius: 24px;
+            box-shadow: var(--glow-green), var(--glow-purple);
+            text-align: center;
+        }
+
+        .modal-price-selector {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 22px;
+            max-height: 340px;
+            overflow-y: auto;
+        }
+
+        .modal-price-opt {
+            padding: 15px 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            cursor: pointer;
+            font-weight: 700;
+            color: #fff;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-price-opt:hover {
+            border-color: var(--electric-green);
+            background: rgba(188, 255, 46, 0.14);
+            color: var(--electric-green);
+            transform: translateX(4px);
+        }
+
+        /* --- VIP MEMBERSHIP SECTION --- */
+        .membership-signup {
+            padding: 70px 6%;
+        }
+
+        .glass-panel {
+            background: var(--glass-panel);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--pink-border-glow);
+            padding: clamp(30px, 6vw, 55px);
+            max-width: 820px;
+            margin: 0 auto;
+            border-radius: 28px;
+            box-shadow: var(--glow-purple);
+        }
+
+        .member-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .member-form input {
+            padding: 15px 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            color: #fff;
+            outline: none;
+            border-radius: 12px;
+            width: 100%;
+            font-family: inherit;
+        }
+
+        .member-form input:focus {
+            border-color: var(--neon-pink);
+        }
+
+        .checkbox-group {
+            grid-column: span 2;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin: 8px 0;
+        }
+
+        .member-form button {
+            grid-column: span 2;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--electric-green), #98e600);
+            color: #05030a;
+            border: none;
+            font-weight: 800;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            box-shadow: var(--glow-green);
+        }
+
+        @media (max-width: 600px) {
+            .member-form { grid-template-columns: 1fr; }
+            .checkbox-group, .member-form button { grid-column: span 1; }
+        }
+
+        /* --- LOGIN MODAL --- */
+        #login-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 3, 10, 0.92);
+            backdrop-filter: blur(18px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-box {
+            background: var(--glass-panel);
+            padding: clamp(28px, 6vw, 45px);
+            border: 1px solid var(--neon-pink);
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+            border-radius: 24px;
+            box-shadow: var(--glow-pink);
+        }
+
+        .modal-tabs {
+            display: flex;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .tab.active {
+            color: var(--electric-green);
+            border-bottom: 2px solid var(--electric-green);
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            color: #fff;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            outline: none;
+        }
+
+        /* --- FLOATING MINI CART & SLIDE-OUT BAG DRAWER --- */
+        #mini-cart {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: linear-gradient(135deg, var(--electric-green), #98e600);
+            color: #05030a;
+            padding: 14px 26px;
+            font-weight: 900;
+            border-radius: 50px;
+            box-shadow: var(--glow-green);
+            z-index: 1001;
+            display: none;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        #cart-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 480px;
+            height: 100%;
+            background: rgba(11, 7, 22, 0.96);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            z-index: 2500;
+            transition: var(--transition);
+            padding: 35px 28px;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid var(--neon-pink);
+            overflow-y: auto;
+        }
+
+        #cart-drawer.active {
+            right: 0;
+        }
+
+        .cart-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+        }
+
+        .cart-line h4 {
+            font-size: 0.88rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .cart-line p {
+            font-size: 0.78rem;
+            color: var(--electric-green);
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        .cart-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            border: none;
+            background: transparent;
+            color: var(--hot-pink);
+            cursor: pointer;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .checkout-panel {
+            border-top: 1px solid var(--glass-border);
+            padding-top: 20px;
+            margin-top: 16px;
+        }
+
+        .checkout-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .checkout-field label {
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .checkout-field input,
+        .checkout-field select,
+        .checkout-field textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            outline: none;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .checkout-field select option {
+            background: #120c22;
+            color: #fff;
+        }
+
+        .checkout-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            border: none;
+            padding: 16px;
+            font-weight: 800;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+        }
+
+        /* --- FOOTER WITH TALON IT SOLUTIONS CREDIT --- */
+        .luxury-footer {
+            background: rgba(6, 4, 12, 0.96);
+            border-top: 1px solid var(--glass-border);
+            padding: 70px 6% 35px;
+        }
+
+        .footer-cols {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
+            max-width: 1400px;
+            margin: 0 auto 50px;
+        }
+
+        .footer-col h4 {
+            color: var(--electric-green);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .footer-col ul a:hover {
+            color: var(--neon-pink);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .talon-credit {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #9e96b5;
+            font-weight: 600;
+        }
+
+        .talon-credit span {
+            color: var(--electric-green);
+            font-weight: 800;
+        }
+
+        @media (max-width: 900px) {
+            .footer-cols { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 550px) {
+            .footer-cols { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { justify-content: center; text-align: center; }
+        }
+
+        /* --- TOAST & REVEAL --- */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(18, 12, 34, 0.96);
+            border: 1px solid var(--electric-green);
+            color: var(--electric-green);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.82rem;
+            z-index: 9999;
+            transition: transform 0.4s ease;
+            box-shadow: var(--glow-green);
+        }
+
+        #toast.active {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div id="toast">Added to bag</div>
+
+<!-- TOP BLACK FRIDAY TICKER -->
+<div class="promo-ticker">
+    <div class="ticker-content">
+        🔥 BLACK FRIDAY DROP LIVE — BULK PREROLL TUBES FROM R350 — A GRADE OUTDOOR SPECIALS, GREENHOUSE, EXOTIC, AQUAPONIC & INDOOR — NEW SHROOM STRAINS ADDED — CUSTOM PACKAGES AVAILABLE ON REQUEST — STRUGGLE IS AN ENEMY AND WEED IS THE REMEDY 🔥
+    </div>
+</div>
+
+<!-- 18+ AGE VERIFICATION GATE -->
+<div id="age-gate">
+    <div class="gate-content">
+        <h1>OUTRAGEOUS MEDZ</h1>
+        <p style="color: var(--neon-pink); font-weight: 800; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Iso-Neon Botanical Lounge | Est. 2026</p>
+        <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.92rem;">Access to our private dispensary shelf & Black Friday menu is strictly reserved for adults aged 18+.</p>
+        <div class="gate-buttons">
+            <button class="btn-gate btn-yes" onclick="verifyAge()">Enter Lounge (18+)</button>
+            <button class="btn-gate btn-no" onclick="window.location.href='https://google.com'">Exit</button>
+        </div>
+        <p style="margin-top: 25px; font-size: 0.65rem; color: #756d8c; letter-spacing: 1.5px;">CRAFTED & MODERNISED — MADE BY TALON IT SOLUTIONS</p>
+    </div>
+</div>
+
+<!-- TIER / QUANTITY SELECTION MODAL -->
+<div id="selection-modal">
+    <div class="selection-box">
+        <span style="float:right; cursor:pointer; color: var(--text-muted); font-size: 1.4rem; line-height: 1;" onclick="toggleSelectionModal()">✕</span>
+        <h2 id="modal-product-title" style="font-family: 'Syncopate', sans-serif; font-size: 1.15rem; color: var(--electric-green); margin-bottom: 6px; clear: both;">Product Name</h2>
+        <p id="modal-product-sub" style="font-size: 0.8rem; color: var(--text-muted);">Select your tier or quantity</p>
+        <div id="modal-options-container" class="modal-price-selector"></div>
+    </div>
+</div>
+
+<!-- MEMBER LOGIN / REGISTER MODAL -->
+<div id="login-modal">
+    <div class="login-box">
+        <span style="position:absolute; top:18px; right:22px; cursor:pointer; color: var(--text-muted); font-size: 1.4rem;" onclick="toggleLogin()">✕</span>
+        <div class="modal-tabs">
+            <div class="tab active" onclick="switchTab('signin', this)">Sign In</div>
+            <div class="tab" onclick="switchTab('register', this)">Register</div>
+        </div>
+        <div id="signin-fields">
+            <input type="email" class="login-input" placeholder="Email Address">
+            <input type="password" class="login-input" placeholder="Password">
+            <button class="btn-gate btn-yes" style="width:100%" onclick="showToast('Member verification sent to Budtender')">Sign In</button>
+        </div>
+        <div id="register-fields" style="display:none;">
+            <input type="text" class="login-input" placeholder="Full Name">
+            <input type="email" class="login-input" placeholder="Email Address">
+            <input type="password" class="login-input" placeholder="Create Password">
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms"> <label for="terms">I agree to the Private Club Terms & confirm I am 18+</label>
+            </div>
+            <button class="btn-gate btn-yes" style="width:100%" onclick="showToast('Membership Application Submitted')">Create Account</button>
+        </div>
+    </div>
+</div>
+
+<!-- STICKY GLASS NAVIGATION -->
+<nav id="navbar">
+    <a href="#" class="logo">OUTRAGEOUS MEDZ</a>
+    <div class="nav-links">
+        <a href="#home">Lounge</a>
+        <a href="#section-packaging">Packaging</a>
+        <a href="#section-flower">Flower</a>
+        <a href="#section-shrooms">Shrooms</a>
+        <a href="#section-medz">Medz Corner</a>
+        <a href="#section-packages">Packages</a>
+    </div>
+    <div class="nav-icons">
+        <button class="btn-login" onclick="toggleLogin()">Member</button>
+        <div class="cart-trigger" onclick="toggleCart()">
+            BAG <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="hero-grid reveal">
+        <div>
+            <span class="hero-tag">Black Friday Drop & Botanical Lounge</span>
+            <h1>Inhale. Hold It. <span>Exhale Luxury.</span></h1>
+            <p>Step inside our illuminated glass-block dispensary experience. Explore Black Friday bulk preroll tubes, curated outdoor to aquaponic harvests, potent shrooms, and custom packages on request.</p>
+            <div class="hero-actions">
+                <button class="btn-gate btn-yes" onclick="document.getElementById('shop').scrollIntoView()">Explore Shelves</button>
+                <a href="https://wa.me/27608623691" target="_blank" class="btn-gate btn-no" style="text-decoration:none; text-align:center;">Chat Budtender</a>
+            </div>
+        </div>
+
+        <div class="hero-glass-showcase">
+            <span class="showcase-badge">Physical Lounge Vibe</span>
+            <div class="store-photo-frame">
+                <img src="WhatsApp Image 2026-08-29 at 14.54.19.jpeg" alt="Outrageous Medz Illuminated Glass-Block Lounge" onerror="this.src='https://images.unsplash.com/photo-1556928045-16f7f50be0f3?auto=format&fit=crop&w=800&q=80'">
+            </div>
+            <h3 style="font-family: 'Syncopate', sans-serif; font-size: 0.95rem; color: #fff; margin-bottom: 6px;">OUTRAGEOUS MEDZ LOUNGE</h3>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px;">"Making you happy makes us happy" — Fast, discreet dispatch & custom packages available on request.</p>
+            <div class="lounge-stats">
+                <div class="stat-box">
+                    <strong>060 862 3691</strong>
+                    <span>Kush King • Online</span>
+                </div>
+                <div class="stat-box">
+                    <strong>063 469 7478</strong>
+                    <span>Budtender 2 • Online</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DELIVERY ZONES BAR -->
+<div class="safety-bar">
+    <span>📍 PTA East R50–R120</span>
+    <span>📍 Centurion R140</span>
+    <span>📍 Midrand R230–R250</span>
+    <span>📍 Joburg R300–R400</span>
+</div>
+
+<!-- CATALOGUE HEADER & STICKY FILTER BAR -->
+<div class="catalog-header" id="shop">
+    <span class="hero-tag">Black Friday & Dispensary Menu</span>
+    <h2 class="section-title">The Illuminated Shelf</h2>
+</div>
+
+<div class="catalog-controls">
+    <div class="search-container">
+        <input type="text" class="search-input" id="productSearch" placeholder="Search strains, bulk preroll tubes, mylar bags, shrooms, medz, or packages..." onkeyup="applyCombinedFilter()">
+    </div>
+    <div class="filter-group">
+        <button class="filter-btn active" onclick="filterMenu('all', this)">All</button>
+        <button class="filter-btn" onclick="filterMenu('packaging', this)">Packaging</button>
+        <button class="filter-btn" onclick="filterMenu('flower', this)">Flower</button>
+        <button class="filter-btn" onclick="filterMenu('shrooms', this)">Shrooms</button>
+        <button class="filter-btn" onclick="filterMenu('medz', this)">Medz Corner</button>
+        <button class="filter-btn" onclick="filterMenu('packages', this)">Packages</button>
+    </div>
+</div>
+
+<!-- MAIN ORGANIZED CATALOGUE SHELVES -->
+<main class="shop-container">
+
+    <!-- SHELF 1: BLACK FRIDAY BULK PREROLL TUBES & PACKAGING -->
+    <section id="section-packaging" class="catalog-section reveal">
+        <div class="shelf-header">
+            <h2 class="section-subtitle-bar">Black Friday Bulk Preroll Tubes & Packaging</h2>
+            <span class="shelf-tag">🔥 Black Friday Wholesale Menu</span>
+        </div>
+        <div class="grid">
+
+            <!-- Bulk Preroll Tubes (Different Colours) -->
+            <div class="product-card" data-options='[{"w":"100 Tubes", "p":350}, {"w":"300 Tubes", "p":900}, {"w":"500 Tubes", "p":1250}, {"w":"1000 Tubes", "p":2100}, {"w":"2000 Tubes", "p":4000}, {"w":"5000 Tubes", "p":9500}]'>
+                <span class="badge bf">Black Friday Menu</span>
+                <div class="img-wrap"><img src="13.jpeg" alt="Bulk Preroll Tubes Different Colours" onerror="this.src='https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Bulk Packaging</span>
+                    <h3 class="card-title">Bulk Preroll Tubes (Different Colours)</h3>
+                    <p class="card-desc">Airtight pop-top preroll tubes available in assorted colours. Specify preferred colours at checkout.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Bulk Preroll Tubes (Different Colours)')">Select Bulk Tier</button>
+                </div>
+            </div>
+
+            <!-- Clear Round Tubes -->
+            <div class="product-card" data-options='[{"w":"100 Clear Round Tubes", "p":350}, {"w":"300 Clear Round Tubes", "p":900}, {"w":"500 Clear Round Tubes", "p":1250}, {"w":"1000 Clear Round Tubes", "p":2100}, {"w":"2000 Clear Round Tubes", "p":4000}, {"w":"5000 Clear Round Tubes", "p":9500}]'>
+                <span class="badge">Crystal Clear</span>
+                <div class="img-wrap"><img src="18.jpeg" alt="Clear Round Tubes" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Display Packaging</span>
+                    <h3 class="card-title">Clear Round Tubes</h3>
+                    <p class="card-desc">Crystal-clear round tubes ideal for showcasing flower and pre-rolls with sleek shelf presentation.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Clear Round Tubes')">Select Bulk Tier</button>
+                </div>
+            </div>
+
+            <!-- Screw Top Tubes -->
+            <div class="product-card" data-options='[{"w":"100 Screw Top Tubes", "p":350}, {"w":"300 Screw Top Tubes", "p":900}, {"w":"500 Screw Top Tubes", "p":1250}, {"w":"1000 Screw Top Tubes", "p":2100}, {"w":"2000 Screw Top Tubes", "p":4000}, {"w":"5000 Screw Top Tubes", "p":9500}]'>
+                <span class="badge pink">Scent-Lock Seal</span>
+                <div class="img-wrap"><img src="16.jpeg" alt="Screw Top Tubes" onerror="this.src='https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Heavy-Duty Tubes</span>
+                    <h3 class="card-title">Screw Top Tubes</h3>
+                    <p class="card-desc">Threaded screw-cap tubes for maximum odour lock and freshness preservation.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Screw Top Tubes')">Select Bulk Tier</button>
+                </div>
+            </div>
+
+            <!-- Mylar Bags -->
+            <div class="product-card" data-options='[{"w":"Inquire / Bulk Pack", "p":0}]'>
+                <span class="badge">Smell-Proof</span>
+                <div class="img-wrap"><img src="15.jpeg" alt="Mylar Bags" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Dispensary Bags</span>
+                    <h3 class="card-title">Mylar Bags</h3>
+                    <p class="card-desc">Resealable, heat-sealable barrier Mylar bags available in various sizes and finishes.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Availability</span><span>In Stock</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Quote on Inquiry</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Mylar Bags')">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SHELF 2: CANNABIS FLOWER SHELF -->
+    <section id="section-flower" class="catalog-section reveal">
+        <div class="shelf-header">
+            <h2 class="section-subtitle-bar">Cannabis Flower Shelf</h2>
+            <span class="shelf-tag">A Grade Outdoor • Greenhouse • Exotic • Aquaponic • Indoor</span>
+        </div>
+        <div class="grid">
+
+            <!-- A GRADE OUTDOOR SPECIAL STRAINS (UPDATED PRICES) -->
+            <div class="product-card" data-options='[{"w":"7g", "p":50}, {"w":"30g", "p":150}, {"w":"50g", "p":250}, {"w":"100g", "p":450}, {"w":"200g", "p":800}, {"w":"500g", "p":1800}, {"w":"1000g", "p":3500}, {"w":"2kg Greenhouse", "p":6000}]'>
+                <span class="badge bf">A Grade Outdoor Special</span>
+                <div class="img-wrap"><img src="ChatGPT Image Jan 21, 2026, 05_33_52 AM.png" alt="Gorilla Glue" onerror="this.src='https://images.unsplash.com/photo-1536819114556-1e10f967fb61?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">A Grade Outdoor Special</span>
+                    <h3 class="card-title">Gorilla Glue</h3>
+                    <p class="card-desc">Heavy-hitting resinous outdoor harvest with earthy pine and pungent diesel notes.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Gorilla Glue (A Grade Outdoor)')">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"7g", "p":50}, {"w":"30g", "p":150}, {"w":"50g", "p":250}, {"w":"100g", "p":450}, {"w":"200g", "p":800}, {"w":"500g", "p":1800}, {"w":"1000g", "p":3500}, {"w":"2kg Greenhouse", "p":6000}]'>
+                <span class="badge bf">A Grade Outdoor Special</span>
+                <div class="img-wrap"><img src="deathstar.jpg" alt="Malawi Gold" onerror="this.src='https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">A Grade Outdoor Special</span>
+                    <h3 class="card-title">Malawi Gold</h3>
+                    <p class="card-desc">Legendary African landrace sativa delivering an energetic, uplifting daytime buzz.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Malawi Gold (A Grade Outdoor)')">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"7g", "p":50}, {"w":"30g", "p":150}, {"w":"50g", "p":250}, {"w":"100g", "p":450}, {"w":"200g", "p":800}, {"w":"500g", "p":1800}, {"w":"1000g", "p":3500}, {"w":"2kg Greenhouse", "p":6000}]'>
+                <span class="badge bf">A Grade Outdoor Special</span>
+                <div class="img-wrap"><img src="greengoblin.jpg" alt="Mt Kilimanjalo" onerror="this.src='https://images.unsplash.com/photo-1503262028195-93c528f03218?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">A Grade Outdoor Special</span>
+                    <h3 class="card-title">Mt Kilimanjalo</h3>
+                    <p class="card-desc">Pure East African high-altitude sativa with sweet citrus aroma and clean cerebral focus.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Mt Kilimanjalo (A Grade Outdoor)')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- GREENHOUSE - MAUI WOWIE (UPDATED PRICES) -->
+            <div class="product-card" data-options='[{"w":"40g", "p":300}, {"w":"70g", "p":500}, {"w":"100g", "p":650}, {"w":"200g", "p":1200}, {"w":"500g", "p":2500}, {"w":"1000g", "p":4500}, {"w":"2kg", "p":8000}]'>
+                <span class="badge">Greenhouse</span>
+                <div class="img-wrap"><img src="Cali-Orange.webp" alt="Maui Wowie" onerror="this.src='https://images.unsplash.com/photo-1556928045-16f7f50be0f3?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Greenhouse Strain</span>
+                    <h3 class="card-title">Maui Wowie</h3>
+                    <p class="card-desc">Tropical pineapple and sweet island flavors paired with smooth, stress-melting euphoria.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Maui Wowie (Greenhouse)')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- PREMIUM GREENHOUSE -->
+            <div class="product-card" data-options='[{"w":"20g", "p":300}, {"w":"50g", "p":500}, {"w":"112g", "p":1000}, {"w":"200g", "p":1600}]'>
+                <span class="badge pink">Premium Greenhouse</span>
+                <div class="img-wrap"><img src="ChatGPT Image Jan 21, 2026, 05_38_43 AM.png" alt="Pineapple Express" onerror="this.src='https://images.unsplash.com/photo-1589140915708-20ff586fe767?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Premium Greenhouse</span>
+                    <h3 class="card-title">Pineapple Express</h3>
+                    <p class="card-desc">Vibrant tropical terpenes with a long-lasting, creative, and energetic hybrid kick.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Pineapple Express (Premium GH)')">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"20g", "p":300}, {"w":"50g", "p":500}, {"w":"112g", "p":1000}, {"w":"200g", "p":1600}]'>
+                <span class="badge pink">Premium Greenhouse</span>
+                <div class="img-wrap"><img src="ChatGPT Image Jan 21, 2026, 06_10_39 AM.png" alt="Northern Lights" onerror="this.src='https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Premium Greenhouse</span>
+                    <h3 class="card-title">Northern Lights</h3>
+                    <p class="card-desc">Iconic pure indica renowned for frosted trichomes, sweet spice notes, and deep relaxation.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>20g / 50g</span><span>R300 / R500</span></div>
+                        <div class="tier-row"><span>112g / 200g</span><span>R1000 / R1600</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Northern Lights (Premium GH)')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- EXOTIC -->
+            <div class="product-card" data-options='[{"w":"5g", "p":200}, {"w":"10g", "p":350}, {"w":"25g", "p":650}, {"w":"50g", "p":1000}, {"w":"100g", "p":1700}]'>
+                <span class="badge pink">Exotic</span>
+                <div class="img-wrap"><img src="lemoncherry.jpg" alt="Laughing Buddha" onerror="this.src='https://images.unsplash.com/photo-1536819114556-1e10f967fb61?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Exotic Greenhouse</span>
+                    <h3 class="card-title">Laughing Buddha</h3>
+                    <p class="card-desc">Award-winning exotic sativa bursting with sweet peppery fruit and joyful, giggly energy.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Laughing Buddha (Exotic)')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- AQUAPONIC GREENHOUSE -->
+            <div class="product-card" data-options='[{"w":"5g", "p":300}, {"w":"10g", "p":500}, {"w":"20g", "p":900}, {"w":"50g", "p":1700}]'>
+                <span class="badge">Aquaponic Greenhouse</span>
+                <div class="img-wrap"><img src="maderincookies.jpg" alt="Green Crack" onerror="this.src='https://images.unsplash.com/photo-1556928045-16f7f50be0f3?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Aquaponic Greenhouse</span>
+                    <h3 class="card-title">Green Crack</h3>
+                    <p class="card-desc">Clean, living-water aquaponic cultivation delivering razor-sharp focus and tangy mango notes.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Green Crack (Aquaponic GH)')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- B GRADE INDOOR -->
+            <div class="product-card" data-options='[{"w":"1g", "p":50}, {"w":"5g", "p":200}, {"w":"10g", "p":450}]'>
+                <span class="badge">B Grade Indoor</span>
+                <div class="img-wrap"><img src="gelatoo.webp" alt="Gelato" onerror="this.src='https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">B Grade Indoor</span>
+                    <h3 class="card-title">Gelato</h3>
+                    <p class="card-desc">Creamy dessert-terpene indoor buds offering balanced full-body calm at great value.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Gelato (B Grade Indoor)')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- A GRADE INDOOR -->
+            <div class="product-card" data-options='[{"w":"1g", "p":120}, {"w":"5g", "p":500}]'>
+                <span class="badge pink">A Grade Indoor</span>
+                <div class="img-wrap"><img src="icee.png" alt="Ice Cabbage" onerror="this.src='https://images.unsplash.com/photo-1589140915708-20ff586fe767?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">A Grade Indoor</span>
+                    <h3 class="card-title">Ice Cabbage</h3>
+                    <p class="card-desc">Top-shelf indoor flower coated in dense frosty trichomes with crisp, gassy potency.</p>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Ice Cabbage (A Grade Indoor)')">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SHELF 3: SHROOMS STRAINS SHELF -->
+    <section id="section-shrooms" class="catalog-section reveal">
+        <div class="shelf-header">
+            <h2 class="section-subtitle-bar">Shrooms Strains</h2>
+            <span class="shelf-tag">🍄 Botanical Psychedelic Shelf</span>
+        </div>
+        <div class="grid">
+
+            <div class="product-card" data-options='[{"w":"1g", "p":100}, {"w":"10g", "p":800}]'>
+                <span class="badge pink">High Potency</span>
+                <div class="img-wrap"><img src="colorful-gummies-on-white-background.jpg" alt="Natal Super Strength" onerror="this.src='https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Shrooms Strain</span>
+                    <h3 class="card-title">Natal Super Strength</h3>
+                    <p class="card-desc">Renowned South African cultivar prized for clean, vivid visuals and smooth body feel.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>1g</span><span>R100</span></div>
+                        <div class="tier-row"><span>10g</span><span>R800</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Natal Super Strength (Shrooms)')">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"1g", "p":100}, {"w":"10g", "p":800}]'>
+                <span class="badge">Classic Wisdom</span>
+                <div class="img-wrap"><img src="colorful-gummies-on-white-background.jpg" alt="Golden Teachers" onerror="this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Shrooms Strain</span>
+                    <h3 class="card-title">Golden Teachers</h3>
+                    <p class="card-desc">Balanced, introspective, and euphoric—ideal for both newcomers and seasoned explorers.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>1g</span><span>R100</span></div>
+                        <div class="tier-row"><span>10g</span><span>R800</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Golden Teachers (Shrooms)')">Order Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"1g", "p":100}, {"w":"10g", "p":800}]'>
+                <span class="badge">Wild Heritage</span>
+                <div class="img-wrap"><img src="colorful-gummies-on-white-background.jpg" alt="Transkei" onerror="this.src='https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Shrooms Strain</span>
+                    <h3 class="card-title">Transkei</h3>
+                    <p class="card-desc">Fast-acting coastal South African strain known for warm energy and bright sensory clarity.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>1g</span><span>R100</span></div>
+                        <div class="tier-row"><span>10g</span><span>R800</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Transkei (Shrooms)')">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SHELF 4: MEDZ CORNER (AVAILABLE IN BOXES) -->
+    <section id="section-medz" class="catalog-section reveal">
+        <div class="shelf-header">
+            <h2 class="section-subtitle-bar">Medz Corner (Available in Boxes)</h2>
+            <span class="shelf-tag">📦 Sealed Box Inventory • Inquire for Pricing</span>
+        </div>
+        <div class="grid">
+
+            <div class="product-card" data-options='[{"w":"Box Inquiry (Contact for Pricing)", "p":0}]'>
+                <span class="badge pink">Available in Boxes</span>
+                <div class="img-wrap"><img src="11.jpeg" alt="Ritalin" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Medz Corner</span>
+                    <h3 class="card-title">Ritalin</h3>
+                    <p class="card-desc">Available in sealed boxes. Add to bag or message our budtender directly for current box pricing.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Format</span><span>Full Box</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Contact / Inquire</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Ritalin (Box)')">Inquire / Add Box</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"Box Inquiry (Contact for Pricing)", "p":0}]'>
+                <span class="badge pink">Available in Boxes</span>
+                <div class="img-wrap"><img src="12.jpeg" alt="Concerta" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Medz Corner</span>
+                    <h3 class="card-title">Concerta</h3>
+                    <p class="card-desc">Available in sealed boxes. Add to bag or message our budtender directly for current box pricing.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Format</span><span>Full Box</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Contact / Inquire</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Concerta (Box)')">Inquire / Add Box</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"Box Inquiry (Contact for Pricing)", "p":0}]'>
+                <span class="badge">Available in Boxes</span>
+                <div class="img-wrap"><img src="14.jpeg" alt="Stilpane" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Medz Corner</span>
+                    <h3 class="card-title">Stilpane</h3>
+                    <p class="card-desc">Available in boxes. Add to bag to request stock confirmation and pricing from our budtender.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Format</span><span>Full Box</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Contact / Inquire</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Stilpane (Box)')">Inquire / Add Box</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"Box Inquiry (Contact for Pricing)", "p":0}]'>
+                <span class="badge">Available in Boxes</span>
+                <div class="img-wrap"><img src="17.jpeg" alt="Penagon" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Medz Corner</span>
+                    <h3 class="card-title">Penagon</h3>
+                    <p class="card-desc">Available in boxes. Add to bag to request stock confirmation and pricing from our budtender.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Format</span><span>Full Box</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Contact / Inquire</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Penagon (Box)')">Inquire / Add Box</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-options='[{"w":"Box Inquiry (Contact for Pricing)", "p":0}]'>
+                <span class="badge">Available in Boxes</span>
+                <div class="img-wrap"><img src="19.jpeg" alt="Broncleer" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Medz Corner</span>
+                    <h3 class="card-title">Broncleer</h3>
+                    <p class="card-desc">Available in boxes. Add to bag to request stock confirmation and pricing from our budtender.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Format</span><span>Full Box</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Contact / Inquire</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Broncleer (Box)')">Inquire / Add Box</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SHELF 5: SIGNATURE & CUSTOM PACKAGES -->
+    <section id="section-packages" class="catalog-section reveal">
+        <div class="shelf-header">
+            <h2 class="section-subtitle-bar">Signature & Custom Packages</h2>
+            <span class="shelf-tag">✨ Custom Packages Also Available On Request</span>
+        </div>
+        <div class="grid">
+
+            <!-- Custom Package Card -->
+            <div class="product-card" data-options='[{"w":"Custom Package Request (Specify Budget & Items)", "p":0}]'>
+                <span class="badge bf">Available On Request</span>
+                <div class="img-wrap"><img src="box1.png" alt="Custom Package on Request" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Bespoke Bundles</span>
+                    <h3 class="card-title">Custom Packages Available on Request</h3>
+                    <p class="card-desc">Want a custom mix of flower grades, shrooms, bulk preroll tubes, or boxes tailored to your budget? Request a bespoke bundle.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Bundle Type</span><span>Tailored to Budget</span></div>
+                        <div class="tier-row"><span>Pricing</span><span>Custom Quote</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Custom Package Request')">Request Custom Package</button>
+                </div>
+            </div>
+
+            <!-- Balrog Power Package -->
+            <div class="product-card" data-options='[{"w":"Balrog Power Package", "p":500}]'>
+                <span class="badge">Power Pack</span>
+                <div class="img-wrap"><img src="box.png" alt="Balrog Power Package" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Signature Bundle</span>
+                    <h3 class="card-title">Balrog Power Package</h3>
+                    <p class="card-desc">25g Normal Greenhouse, 20g Premium Greenhouse, and 6g Exotic.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Total Weight</span><span>51g Assorted</span></div>
+                        <div class="tier-row"><span>Package Price</span><span>R500</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Balrog Power Package')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Never Have I Ever Package -->
+            <div class="product-card" data-options='[{"w":"Never Have I Ever Package", "p":800}]'>
+                <span class="badge">Variety Pack</span>
+                <div class="img-wrap"><img src="box1.png" alt="Never Have I Ever Package" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Signature Bundle</span>
+                    <h3 class="card-title">Never Have I Ever Package</h3>
+                    <p class="card-desc">30g Normal GH, 30g Premium GH, 20g Exotic GH, 12g Outdoor, 1g B Grade Indoor.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Total Weight</span><span>93g Assorted</span></div>
+                        <div class="tier-row"><span>Package Price</span><span>R800</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Never Have I Ever Package')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Officer Salary Package -->
+            <div class="product-card" data-options='[{"w":"Officer Salary Package", "p":1200}]'>
+                <span class="badge pink">Heavyweight</span>
+                <div class="img-wrap"><img src="box.png" alt="Officer Salary Package" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Signature Bundle</span>
+                    <h3 class="card-title">Officer Salary Package</h3>
+                    <p class="card-desc">50g Normal Greenhouse, 50g Premium Greenhouse, 25g Exotic, 2g Indoor.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Total Weight</span><span>127g Assorted</span></div>
+                        <div class="tier-row"><span>Package Price</span><span>R1200</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Officer Salary Package')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Bruce Lee Package -->
+            <div class="product-card" data-options='[{"w":"Bruce Lee Package", "p":1700}]'>
+                <span class="badge pink">Master Tier</span>
+                <div class="img-wrap"><img src="box3.png" alt="Bruce Lee Package" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Signature Bundle</span>
+                    <h3 class="card-title">Bruce Lee Package</h3>
+                    <p class="card-desc">50g Normal GH, 50g Premium GH, 50g Exotic GH, 12g Outdoor, 2g Indoor.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Total Weight</span><span>164g Assorted</span></div>
+                        <div class="tier-row"><span>Package Price</span><span>R1700</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Bruce Lee Package')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Saruman Power Package -->
+            <div class="product-card" data-options='[{"w":"Saruman Power Package", "p":2500}]'>
+                <span class="badge">Wizard Reserve</span>
+                <div class="img-wrap"><img src="box.png" alt="Saruman Power Package" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Signature Bundle</span>
+                    <h3 class="card-title">Saruman Power Package</h3>
+                    <p class="card-desc">100g Normal GH, 100g Premium GH, 50g Exotic GH, 15g Outdoor, 3g Indoor.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Total Weight</span><span>268g Assorted</span></div>
+                        <div class="tier-row"><span>Package Price</span><span>R2500</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Saruman Power Package')">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Gandalf Power Package -->
+            <div class="product-card" data-options='[{"w":"Gandalf Power Package (Platter for 4)", "p":3600}]'>
+                <span class="badge pink">Platter for 4</span>
+                <div class="img-wrap"><img src="box3.png" alt="Gandalf Power Package" onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80'"></div>
+                <div class="card-body">
+                    <span class="card-category">Ultimate Platter</span>
+                    <h3 class="card-title">Gandalf Power Package</h3>
+                    <p class="card-desc">10g Shrooms, 100g Outdoor, 100g Normal GH, 100g Premium GH, 100g Exotic, 10g Aquaponic, 5g Indoor.</p>
+                    <div class="dispensary-tiers">
+                        <div class="tier-row"><span>Total Weight</span><span>425g + Shrooms</span></div>
+                        <div class="tier-row"><span>Package Price</span><span>R3600</span></div>
+                    </div>
+                    <button class="btn-add-main" onclick="handleAddToCart(this, 'Gandalf Power Package')">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- VIP MEMBERSHIP SECTION -->
+<section class="membership-signup" id="membership">
+    <div class="glass-panel reveal">
+        <div style="text-align: center;">
+            <span class="hero-tag">Outrageous Medz Private Club</span>
+            <h2 class="section-title" style="margin-bottom: 12px;">Join The Inner Circle</h2>
+            <p style="color: var(--text-muted); max-width: 560px; margin: 0 auto;">Unlock priority access to Black Friday wholesale drops, private club menu updates, and custom package perks.</p>
+        </div>
+        <div class="member-form">
+            <input type="text" id="memName" placeholder="Full Name / Nickname">
+            <input type="tel" id="memPhone" placeholder="WhatsApp Number">
+            <input type="email" id="memEmail" placeholder="Email Address">
+            <input type="text" id="memArea" placeholder="Delivery Area (e.g. PTA East, Centurion)">
+            <div class="checkbox-group">
+                <input type="checkbox" id="memAge" checked>
+                <label for="memAge">I confirm I am 18+ and wish to receive private club updates.</label>
+            </div>
+            <button type="button" onclick="joinClubWhatsApp()">Request VIP Membership</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER WITH TALON IT SOLUTIONS FINE PRINT -->
+<footer class="luxury-footer">
+    <div class="footer-cols">
+        <div class="footer-col">
+            <a href="#" class="logo" style="display:block; margin-bottom:14px;">OUTRAGEOUS MEDZ</a>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.7;">
+                Premium Quality • Discreet Delivery • Iso-Neon Botanical Lounge Experience. <br>
+                <em>"Struggle is an enemy and weed is the remedy."</em>
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Dispensary Shelves</h4>
+            <ul>
+                <li><a href="#section-packaging">Black Friday Preroll Tubes</a></li>
+                <li><a href="#section-flower">Cannabis Flower Shelf</a></li>
+                <li><a href="#section-shrooms">Shrooms Strains</a></li>
+                <li><a href="#section-medz">Medz Corner</a></li>
+                <li><a href="#section-packages">Signature & Custom Packages</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Budtender Lines</h4>
+            <ul>
+                <li><a href="https://wa.me/27608623691" target="_blank">Kush King: 060 862 3691</a></li>
+                <li><a href="https://wa.me/27634697478" target="_blank">Budtender 2: 063 469 7478</a></li>
+                <li><a href="#membership">Private Club Registration</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Lounge Info</h4>
+            <ul>
+                <li><a href="#age-gate" onclick="localStorage.removeItem('om-verified'); location.reload();">18+ Verification</a></li>
+                <li><a href="#shop">Gauteng & Nationwide Dispatch</a></li>
+                <li><a href="#section-packages">Wholesale & Bulk Inquiries</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div>© 2026 OUTRAGEOUS MEDZ. ALL RIGHTS RESERVED. STRICTLY 18+.</div>
+        <div class="talon-credit">Crafted & Modernised — Made by <span>Talon IT Solutions</span></div>
+    </div>
+</footer>
+
+<!-- FLOATING MINI CART -->
+<div id="mini-cart" onclick="toggleCart()">
+    <span id="mini-cart-qty">0 Items</span>
+    <span>|</span>
+    <span id="mini-cart-total">R0</span>
+</div>
+
+<!-- SLIDE-OUT GLASS BAG DRAWER & WHATSAPP CHECKOUT -->
+<div id="cart-drawer">
+    <div style="display:flex; justify-content:space-between; margin-bottom:28px; align-items: center;">
+        <h2 style="font-family: 'Syncopate', sans-serif; font-weight:700; color: var(--electric-green); font-size: 1.25rem;">YOUR BAG</h2>
+        <span style="cursor:pointer; font-weight:800; color: var(--neon-pink); letter-spacing: 1px; font-size: 0.8rem;" onclick="toggleCart()">CLOSE ✕</span>
+    </div>
+
+    <div id="cart-items-list" style="flex:1; overflow-y:auto;"></div>
+
+    <div style="border-top: 1px solid var(--glass-border); padding-top:20px;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-weight:800; font-size:1.25rem;">
+            <span>Estimated Total</span>
+            <span id="cart-total" style="color:var(--electric-green);">R0</span>
+        </div>
+
+        <div class="checkout-panel">
+            <form id="checkout-form" onsubmit="submitCheckout(event)">
+                <div class="checkout-field">
+                    <label for="budtenderSelect">Select Budtender</label>
+                    <select id="budtenderSelect" name="budtender">
+                        <option value="27608623691">Kush King (060 862 3691)</option>
+                        <option value="27634697478">Budtender 2 (063 469 7478)</option>
+                    </select>
+                </div>
+                <div class="checkout-field">
+                    <label for="checkoutName">Name / Nickname</label>
+                    <input id="checkoutName" name="name" required placeholder="Your name">
+                </div>
+                <div class="checkout-field">
+                    <label for="checkoutAddress">Delivery Area / Address</label>
+                    <input id="checkoutAddress" name="address" required placeholder="e.g. Pretoria East, Centurion, Midrand...">
+                </div>
+                <div class="checkout-field">
+                    <label for="checkoutNotes">Order Notes (Tube colours, custom package budget & strains)</label>
+                    <textarea id="checkoutNotes" name="notes" rows="2" placeholder="Optional notes..."></textarea>
+                </div>
+                <button class="checkout-btn" id="checkoutSubmit" type="submit">Send Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const ORDER_STORAGE_KEY = 'om-iso-neon-cart-v2';
+    let cart = loadCart();
+    let currentFilterCategory = 'all';
+
+    function loadCart() {
+        try {
+            const saved = JSON.parse(localStorage.getItem(ORDER_STORAGE_KEY) || '[]');
+            return Array.isArray(saved) ? saved : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function showToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.innerText = msg;
+        toast.classList.add('active');
+        setTimeout(() => toast.classList.remove('active'), 2600);
+    }
+
+    function verifyAge() {
+        localStorage.setItem('om-verified', 'true');
+        const gate = document.getElementById('age-gate');
+        gate.style.opacity = '0';
+        setTimeout(() => gate.style.display = 'none', 500);
+    }
+
+    if (localStorage.getItem('om-verified')) {
+        document.getElementById('age-gate').style.display = 'none';
+    }
+
+    function toggleSelectionModal() {
+        const m = document.getElementById('selection-modal');
+        m.style.display = (m.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function handleAddToCart(btn, productName) {
+        const card = btn.closest('.product-card');
+        const options = JSON.parse(card.getAttribute('data-options'));
+
+        document.getElementById('modal-product-title').innerText = productName;
+        const container = document.getElementById('modal-options-container');
+        container.innerHTML = '';
+
+        options.forEach(opt => {
+            const div = document.createElement('div');
+            div.className = 'modal-price-opt';
+            const priceText = opt.p > 0 ? `R${opt.p}` : 'Request Quote';
+            div.innerHTML = `<span>${opt.w}</span><span style="color:var(--electric-green);">${priceText}</span>`;
+            div.onclick = () => {
+                const label = `${productName} — ${opt.w}`;
+                addToCart(label, opt.p, 1);
+                toggleSelectionModal();
+                showToast(`Added ${productName} to Bag`);
+            };
+            container.appendChild(div);
+        });
+
+        toggleSelectionModal();
+    }
+
+    function addToCart(name, price, qty) {
+        const existing = cart.find(i => i.name === name);
+        if (existing) existing.qty += qty;
+        else cart.push({ name, price: Number(price), qty });
+        renderCart();
+    }
+
+    function updateItemQty(name, delta) {
+        const item = cart.find(i => i.name === name);
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) {
+            cart = cart.filter(i => i.name !== name);
+        }
+        renderCart();
+    }
+
+    function removeItem(name) {
+        cart = cart.filter(i => i.name !== name);
+        renderCart();
+    }
+
+    function renderCart() {
+        localStorage.setItem(ORDER_STORAGE_KEY, JSON.stringify(cart));
+        const list = document.getElementById('cart-items-list');
+        const countEl = document.getElementById('cart-count');
+        const totalEl = document.getElementById('cart-total');
+        const miniCart = document.getElementById('mini-cart');
+
+        list.innerHTML = '';
+        let totalItems = 0;
+        let totalCost = 0;
+
+        if (cart.length === 0) {
+            list.innerHTML = `<p style="color:var(--text-muted); font-size:0.9rem; padding:20px 0;">Your bag is currently empty. Select items from the shelves to begin.</p>`;
+        }
+
+        cart.forEach(item => {
+            totalItems += item.qty;
+            totalCost += item.price * item.qty;
+
+            const line = document.createElement('div');
+            line.className = 'cart-line';
+            const subPrice = item.price > 0 ? `R${(item.price * item.qty).toLocaleString('en-ZA')}` : 'Quote Requested';
+            const safeName = item.name.replace(/'/g, "\\'");
+
+            line.innerHTML = `
+                <div>
+                    <h4>${item.name}</h4>
+                    <p>${item.qty} × ${item.price > 0 ? 'R' + item.price : 'Inquire'} = ${subPrice}</p>
+                </div>
+                <div class="cart-controls">
+                    <button type="button" class="qty-btn" onclick="updateItemQty('${safeName}', -1)">-</button>
+                    <strong>${item.qty}</strong>
+                    <button type="button" class="qty-btn" onclick="updateItemQty('${safeName}', 1)">+</button>
+                    <button type="button" class="remove-btn" onclick="removeItem('${safeName}')">✕</button>
+                </div>
+            `;
+            list.appendChild(line);
+        });
+
+        countEl.innerText = totalItems;
+        totalEl.innerText = `R${totalCost.toLocaleString('en-ZA')}`;
+        miniCart.style.display = totalItems > 0 ? 'flex' : 'none';
+        if (totalItems > 0) {
+            document.getElementById('mini-cart-qty').innerText = `${totalItems} Item${totalItems > 1 ? 's' : ''}`;
+            document.getElementById('mini-cart-total').innerText = `R${totalCost.toLocaleString('en-ZA')}`;
+        }
+    }
+
+    function filterMenu(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilterCategory = cat;
+        applyCombinedFilter();
+    }
+
+    function applyCombinedFilter() {
+        const query = document.getElementById('productSearch').value.toLowerCase();
+        const sections = document.querySelectorAll('.catalog-section');
+
+        sections.forEach(sec => {
+            const catMatch = (currentFilterCategory === 'all' || sec.id === `section-${currentFilterCategory}`);
+            const cards = sec.querySelectorAll('.product-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (catMatch && text.includes(query)) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            sec.classList.toggle('hidden', visibleCount === 0);
+        });
+    }
+
+    function toggleCart() {
+        document.getElementById('cart-drawer').classList.toggle('active');
+    }
+
+    function toggleLogin() {
+        const m = document.getElementById('login-modal');
+        m.style.display = (m.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function switchTab(type, el) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+        document.getElementById('signin-fields').style.display = type === 'signin' ? 'block' : 'none';
+        document.getElementById('register-fields').style.display = type === 'register' ? 'block' : 'none';
+    }
+
+    function submitCheckout(e) {
+        e.preventDefault();
+        if (cart.length === 0) {
+            showToast('Your bag is empty!');
+            return;
+        }
+        const form = new FormData(e.target);
+        const budtenderNumber = form.get('budtender');
+        const name = form.get('name');
+        const address = form.get('address');
+        const notes = form.get('notes') || 'None';
+
+        let total = 0;
+        const lines = cart.map(item => {
+            total += item.price * item.qty;
+            const lineCost = item.price > 0 ? `R${item.price * item.qty}` : 'Quote Requested';
+            return `• ${item.name} (x${item.qty}) — ${lineCost}`;
+        });
+
+        const msg = [
+            `*OUTRAGEOUS MEDZ — NEW ORDER*`,
+            ``,
+            `*Customer:* ${name}`,
+            `*Delivery Area:* ${address}`,
+            ``,
+            `*Order Items:*`,
+            ...lines,
+            ``,
+            `*Estimated Total:* R${total.toLocaleString('en-ZA')}`,
+            `*Notes:* ${notes}`
+        ].join('\n');
+
+        window.open(`https://wa.me/${budtenderNumber}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+    }
+
+    function joinClubWhatsApp() {
+        const name = document.getElementById('memName').value || 'New Member';
+        const phone = document.getElementById('memPhone').value || 'Not provided';
+        const area = document.getElementById('memArea').value || 'Not specified';
+        const msg = `Hi Outrageous Medz! I'd like to apply for VIP Private Club Membership.\nName: ${name}\nNumber: ${phone}\nArea: ${area}`;
+        window.open(`https://wa.me/27608623691?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+    }
+
+    // Sticky Nav & Scroll Reveal
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 40) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    renderCart();
+</script>
+
+</body>
+</html>
