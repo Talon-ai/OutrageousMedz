@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outrageous Medz | Premium Cannabis, Mushrooms & Accessories</title>
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+--neon-pink: #ff00cc;
+--neon-purple: #7029d1;
+--electric-green: #bcff2e;
+--hot-pink: #ff1493;
+--glass: rgba(255, 255, 255, 0.05);
+--header-bg: #000000;
+--card-bg: #ffffff;
+--dark-card: #151515;
+}
+
+    /* --- Animations --- */
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; }
+
+    body { 
+        background-color: #050505; 
+        color: white; 
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+    }
+
+    /* --- Top Promo Bar --- */
+    .promo-ticker {
+        background: var(--hot-pink);
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 8px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .ticker-content {
+        display: inline-block;
+        animation: ticker 35s linear infinite;
+    }
+
+    @keyframes ticker {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    /* --- Header --- */
+    header {
+        background: var(--header-bg);
+        padding: 15px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #222;
+    }
+
+    .logo { 
+        font-family: 'Syncopate', sans-serif; 
+        font-weight: 700; 
+        font-size: 1.2rem; 
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #fff, var(--neon-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        height: 60vh;
+        background: linear-gradient(135deg, #ff1493 0%, #7029d1 50%, #bcff2e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, #050505, transparent);
+    }
+
+    .hero-content { z-index: 10; padding: 0 20px; animation: fadeInUp 1s ease-out; }
+    .hero h1 { font-family: 'Syncopate', sans-serif; font-size: clamp(2rem, 8vw, 4rem); line-height: 1; margin-bottom: 20px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .hero p { font-weight: 900; margin-bottom: 30px; letter-spacing: 3px; font-size: 0.9rem; }
+
+    /* --- Safety Bar --- */
+    .safety-bar {
+        background: white;
+        color: #333;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+        font-weight: 900;
+        font-size: 12px;
+        text-transform: uppercase;
+        overflow-x: auto;
+        border-bottom: 4px solid var(--electric-green);
+    }
+
+    /* --- Menu Sections --- */
+    section { padding: 80px 5%; border-bottom: 1px solid #111; }
+    .section-tag { color: var(--hot-pink); font-weight: 900; text-align: center; display: block; margin-bottom: 10px; letter-spacing: 2px; }
+    h2 { font-family: 'Syncopate', sans-serif; font-size: 1.8rem; margin-bottom: 30px; text-align: center; color: var(--electric-green); text-transform: uppercase; }
+    .section-sub { text-align: center; color: #888; margin-bottom: 40px; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    /* --- Enhanced Product Card --- */
+    .product-card {
+        background: var(--card-bg);
+        color: #000;
+        padding: 25px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-card:hover { 
+        transform: translateY(-10px); 
+        box-shadow: 0 20px 40px rgba(188, 255, 46, 0.3);
+    }
+
+    .product-card h3 { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; margin-bottom: 15px; font-weight: 700; line-height: 1.2; min-height: 40px; display: flex; align-items: center; justify-content: center;}
+    .product-card p { font-size: 0.85rem; color: #666; margin-bottom: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;}
+
+    .price-list { list-style: none; margin-bottom: 25px; background: #f9f9f9; border-radius: 12px; padding: 10px; }
+    .price-list li { 
+        padding: 8px 10px; 
+        border-bottom: 1px solid #eee; 
+        font-weight: 800; 
+        font-size: 1rem; 
+        display: flex; 
+        justify-content: space-between; 
+    }
+    .price-list li:last-child { border-bottom: none; }
+    .price-list li span:first-child { color: #555; font-weight: 400; }
+
+    .add-btn {
+        background: linear-gradient(45deg, var(--hot-pink), var(--neon-purple));
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: 100%;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    }
+
+    .add-btn:hover {
+        filter: brightness(1.2);
+        box-shadow: 0 6px 20px rgba(255, 20, 147, 0.5);
+    }
+
+    /* --- Dark Mode Sections (Mushrooms/Packages) --- */
+    .dark-section { background: #0a0a0a; }
+    .dark-card { background: #111; color: white; border: 1px solid #222; }
+    .dark-card h3 { color: var(--electric-green); }
+    .dark-card p { color: #888; }
+    .dark-card .price-list { background: rgba(255,255,255,0.03); }
+    .dark-card .price-list li { border-color: #222; }
+    .dark-card .price-list li span:first-child { color: #aaa; }
+
+    /* --- Package Cards --- */
+    .package-card {
+        border: 1px solid var(--neon-purple);
+        background: linear-gradient(to bottom right, #111, #000);
+    }
+    .package-card .package-price {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--electric-green);
+        margin: 15px 0;
+        display: block;
+        font-family: 'Syncopate';
+    }
+    .package-details {
+        text-align: left;
+        font-size: 0.85rem;
+        color: #ccc;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    /* --- Membership Section --- */
+    .membership-section {
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 100px 5%;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 40px;
+        border-radius: 25px;
+        border: 1px solid var(--electric-green);
+        box-shadow: 0 0 40px rgba(188, 255, 46, 0.15);
+        backdrop-filter: blur(10px);
+    }
+
+    /* --- Footer --- */
+    footer { padding: 80px 5%; background: #000; border-top: 1px solid #111; text-align: center; }
+
+    /* --- Modal --- */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0; top: 0; width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.95);
+        backdrop-filter: blur(10px);
+        align-items: center; justify-content: center;
+    }
+    .modal-content {
+        background: #111;
+        border: 1px solid var(--electric-green);
+        padding: 40px;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 450px;
+        width: 90%;
+    }
+    .budtender-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(255,255,255,0.05);
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        color: white;
+        border: 1px solid #333;
+        transition: 0.3s;
+    }
+    .budtender-option:hover {
+        border-color: var(--neon-pink);
+        background: rgba(255, 0, 204, 0.1);
+        transform: scale(1.02);
+    }
+    .status-dot { height: 10px; width: 10px; background: var(--electric-green); border-radius: 50%; margin-right: 10px; display: inline-block; box-shadow: 0 0 10px var(--electric-green); }
+
+    /* --- Responsive Fixes --- */
+    @media (max-width: 768px) {
+        section { padding: 60px 4%; }
+        .grid { grid-template-columns: 1fr; }
+        .hero h1 { font-size: 2.2rem; }
+    }
+
+    .product-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image {
+        transform: scale(1.03);
+    }
+
+    .ext-link {
+        display: inline-block;
+        color: var(--hot-pink);
+        font-weight: 900;
+        text-decoration: none;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        padding: 8px 15px;
+        border: 1px solid var(--hot-pink);
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+    .ext-link:hover {
+        background: var(--hot-pink);
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<div class="promo-ticker">
+    <div class="ticker-content">
+        MEMBERSHIP CARDS NOW READY — NEW BULK & SPECIAL MENU '26 UPLOADED — BULK TUBES & MYLAR BAGS IN STOCK — STRUGGLE IS AN ENEMY AND WEED IS THE REMEDY — FREE DELIVERY ON BULK ORDERS — 
+        MDMA & PARTY COMBOS AVAILABLE — KUSH KING ONLINE —
+    </div>
+</div>
+
+<header>
+    <div class="logo">Outrageous Medz</div>
+    <div style="display: flex; gap: 15px; align-items: center;">
+        <a href="https://wa.me/27643077572" target="_blank" style="text-decoration: none; color: white; font-size: 1.4rem;">🛒</a>
+        <span style="font-size: 1.2rem; cursor: pointer;" onclick="document.getElementById('membership-form').scrollIntoView()">👤</span>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <p>OUTRAGEOUS MEDZ 2026 MENU</p>
+        <h1>ULTIMATE MEMBERS<br>MENU</h1>
+        <p>100% Quality | Discreet Delivery | Reliable</p>
+    </div>
+</div>
+
+<div class="safety-bar">
+    <span>📍 Centurion R140</span>
+    <span>📍 PTA East R50-R120</span>
+    <span>📍 Midrand R230-R250</span>
+    <span>📍 Joburg R300-R400</span>
+</div>
+
+<!-- 1. HARDWARE / ACCESSORIES -->
+<section>
+    <div class="reveal">
+        <span class="section-tag">PACKAGING & SUPPLIES</span>
+        <h2>Hardware & Accessories</h2>
+        <div class="grid">
+            <div class="product-card" style="border: 2px solid var(--neon-purple);">
+                <h3>Bulk Preroll Tubes</h3>
+                <p>Available in Different Colours</p>
+                <ul class="price-list">
+                    <li><span>100 Tubes</span> <span>R350</span></li>
+                    <li><span>300 Tubes</span> <span>R900</span></li>
+                    <li><span>500 Tubes</span> <span>R1250</span></li>
+                    <li><span>1000 Tubes</span> <span>R2100</span></li>
+                    <li><span>2000 Tubes</span> <span>R4000</span></li>
+                    <li><span>5000 Tubes</span> <span>R9500</span></li>
+                </ul>
+                <button class="add-btn">Order Tubes</button>
+            </div>
+            <div class="product-card">
+                <h3>Packaging & Containers</h3>
+                <p>Bulk & Retail Supplies</p>
+                <div style="margin-bottom: 20px; text-align: left; font-size: 0.9rem; color: #333; line-height: 1.8;">
+                    <p style="margin-bottom: 10px; color: #000;">• <strong>Mylar Bags:</strong> Available in assorted sizes</p>
+                    <p style="margin-bottom: 15px; color: #000;">• <strong>Clear Round Tubes:</strong> Available in stock</p>
+                    <div style="text-align: center;">
+                        <a href="https://www.mjyplastics.co.za/collections/screw-top-tubes" target="_blank" class="ext-link">View Screw Top Tubes Catalog ↗</a>
+                    </div>
+                </div>
+                <button class="add-btn">Inquire Supplies</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. OUTDOOR SPECIAL (A GRADE) -->
+<section class="dark-section">
+    <div class="reveal">
+        <span class="section-tag">HARVEST DEALS</span>
+        <h2>A Grade Outdoor Special</h2>
+        <p class="section-sub">Strains: Green Goblin • Malawi Gold • Mt Kilimanjalo</p>
+        <div class="grid">
+            <div class="product-card dark-card">
+                <h3>Green Goblin / Malawi Gold / Mt Kilimanjalo</h3>
+                <img src="ChatGPT Image Jan 21, 2026, 05_33_52 AM.png" alt="A Grade Outdoor" class="product-image">
+                <ul class="price-list">
+                    <li><span>7g</span> <span>R50</span></li>
+                    <li><span>30g</span> <span>R150</span></li>
+                    <li><span>50g</span> <span>R250</span></li>
+                    <li><span>100g</span> <span>R450</span></li>
+                    <li><span>200g</span> <span>R800</span></li>
+                    <li><span>500g</span> <span>R1800</span></li>
+                    <li><span>1000g (1kg)</span> <span>R3500</span></li>
+                    <li><span>2kg</span> <span>R6000</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. GREENHOUSE STRAINS -->
+<section>
+    <div class="reveal">
+        <span class="section-tag">ISLAND VIBES</span>
+        <h2>Greenhouse Strains</h2>
+        <p class="section-sub">Strains: Maui Wowie • French Cookies • NightCap</p>
+        <div class="grid">
+            <div class="product-card">
+                <h3>Maui Wowie / French Cookies / NightCap</h3>
+                <img src="greengoblin.jpg" alt="Greenhouse" class="product-image">
+                <ul class="price-list">
+                    <li><span>21g</span> <span>R150</span></li>
+                    <li><span>40g</span> <span>R300</span></li>
+                    <li><span>52g</span> <span>R370</span></li>
+                    <li><span>70g</span> <span>R500</span></li>
+                    <li><span>100g</span> <span>R650</span></li>
+                    <li><span>200g</span> <span>R1200</span></li>
+                    <li><span>500g</span> <span>R2500</span></li>
+                    <li><span>1000g (1kg)</span> <span>R4500</span></li>
+                    <li><span>2kg</span> <span>R8000</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. PREMIUM GREENHOUSE -->
+<section class="dark-section">
+    <div class="reveal">
+        <span class="section-tag">TOP SHELF SELECTION</span>
+        <h2>Premium Greenhouse Strains</h2>
+        <p class="section-sub">Pineapple Express • Northern Lights • Lime Haze • White Truffle • Falcon 9</p>
+        <div class="grid">
+            <div class="product-card dark-card" style="border: 2px solid var(--neon-pink);">
+                <h3>Premium Greenhouse Selection</h3>
+                <img src="Gemini_Generated_Image_q6qcvgq6qcvgq6qc.png" alt="Premium Greenhouse" class="product-image">
+                <ul class="price-list">
+                    <li><span>20g</span> <span>R200</span></li>
+                    <li><span>60g</span> <span>R500</span></li>
+                    <li><span>112g</span> <span>R850</span></li>
+                    <li><span>200g</span> <span>R1400</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. EXOTIC GREENHOUSE / STRAINS -->
+<section>
+    <div class="reveal">
+        <span class="section-tag">ELITE FLAVORS</span>
+        <h2>Exotic Greenhouse Strains</h2>
+        <p class="section-sub">Laughing Buddha • Jamaican Pearl • Monster Cookies</p>
+        <div class="grid">
+            <div class="product-card">
+                <h3>Exotic Selection</h3>
+                <img src="Cali-Orange.webp" alt="Exotic Greenhouse" class="product-image">
+                <ul class="price-list">
+                    <li><span>5g</span> <span>R150</span></li>
+                    <li><span>10g</span> <span>R300</span></li>
+                    <li><span>25g</span> <span>R600</span></li>
+                    <li><span>50g</span> <span>R800</span></li>
+                    <li><span>100g</span> <span>R1400</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. AQUAPONIC GREENHOUSE -->
+<section class="dark-section">
+    <div class="reveal">
+        <span class="section-tag">HYDRO POWER</span>
+        <h2>Aquaponic Greenhouse</h2>
+        <p class="section-sub">Green Crack • Berry Pie • Frosty</p>
+        <div class="grid">
+            <div class="product-card dark-card" style="border-color: var(--electric-green);">
+                <h3>Aquaponic Selection</h3>
+                <img src="ChatGPT Image Jan 21, 2026, 05_38_43 AM.png" alt="Aquaponic" class="product-image">
+                <ul class="price-list">
+                    <li><span>5g</span> <span>R300</span></li>
+                    <li><span>10g</span> <span>R500</span></li>
+                    <li><span>20g</span> <span>R900</span></li>
+                    <li><span>50g</span> <span>R1700</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. B-GRADE & AAA INDOOR -->
+<section>
+    <div class="reveal">
+        <span class="section-tag">INDOOR EXCELLENCE</span>
+        <h2>Indoor Strains</h2>
+        <div class="grid">
+            <div class="product-card">
+                <h3>B Grade Indoor</h3>
+                <p>Gelato • Blueberry Blast</p>
+                <img src="67ad3d86dbb781a959c8a0a2_Lemon Cherry Gelato - window (1).jpg" alt="B Grade Indoor" class="product-image">
+                <ul class="price-list">
+                    <li><span>1g</span> <span>R50</span></li>
+                    <li><span>5g</span> <span>R200</span></li>
+                    <li><span>10g</span> <span>R350</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+            <div class="product-card" style="border: 2px solid var(--electric-green);">
+                <h3>AAA / A Grade Indoor</h3>
+                <p>Ice Cabbage • Gas Candy</p>
+                <img src="bluedream - Copy.webp" alt="AAA Indoor" class="product-image">
+                <ul class="price-list">
+                    <li><span>1g</span> <span>R70</span></li>
+                    <li><span>5g</span> <span>R300</span></li>
+                </ul>
+                <button class="add-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EDIBLES & PRE-ROLLS -->
+<section class="dark-section">
+    <div class="reveal">
+        <span class="section-tag">TREATS & CONVENIENCE</span>
+        <h2>Edibles & Pre-Rolls</h2>
+        <div class="grid">
+            <div class="product-card dark-card">
+                <h3>Edibles Menu</h3>
+                <p>Infused Goodies</p>
+                <ul class="price-list">
+                    <li><span>Choc-chip Cookies</span> <span>R100</span></li>
+                    <li><span>Infused Popcorn</span> <span>R50</span></li>
+                </ul>
+                <button class="add-btn">Order Edibles</button>
+            </div>
+            <div class="product-card dark-card" style="border: 1px solid var(--hot-pink);">
+                <h3>Pre-Rolls </h3>
+                <p>Ready to Light</p>
+                <ul class="price-list">
+                    <li><span>6 Pack</span> <span>R100</span></li>
+                    <li><span>14 Pack</span> <span>R200</span></li>
+                    <li><span>22 Pack</span> <span>R300</span></li>
+                    <li><span>38 Pack</span> <span>R500</span></li>
+                </ul>
+                <button class="add-btn">Order Pre-Rolls</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. MUSHROOM STRAINS -->
+<section>
+    <div class="reveal">
+        <span class="section-tag">PSYCHEDELIC JOURNEY</span>
+        <h2>Mushroom Strains </h2>
+        <p class="section-sub">Natal Super Strength (NSS) • Golden Teachers • Transkei • Australian Caps</p>
+        <div class="grid">
+            <div class="product-card">
+                <h3>Shrooms Menu</h3>
+                <ul class="price-list">
+                    <li><span>1g</span> <span>R40</span></li>
+                    <li><span>10g</span> <span>R380</span></li>
+                </ul>
+                <button class="add-btn">Order Shrooms</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 9 & 10. MEDZ CORNER & PARTY COMBOS -->
+<section class="dark-section">
+    <div class="reveal">
+        <span class="section-tag">PHARMA & NIGHTLIFE</span>
+        <h2>Medz Corner & Party Combos</h2>
+        <div class="grid">
+            <!-- Medz Corner -->
+            <div class="product-card dark-card" style="border: 1px solid var(--electric-green);">
+                <h3>Medz Corner </h3>
+                <p>Available in Boxes or Units</p>
+                <ul class="price-list">
+                    <li><span>Ritalin</span> <span>Inquire</span></li>
+                    <li><span>Concerta</span> <span>Inquire</span></li>
+                    <li><span>Stilpane</span> <span>Inquire</span></li>
+                    <li><span>Penagon</span> <span>Inquire</span></li>
+                    <li><span>Broncleer</span> <span>Inquire</span></li>
+                </ul>
+                <button class="add-btn">Inquire Medz</button>
+            </div>
+
+            <!-- E-Pills & MDMA -->
+            <div class="product-card dark-card" style="border: 1px solid var(--neon-pink);">
+                <h3>E-Pills & MDMA </h3>
+                <p>Savadorians & Pure MDMA</p>
+                <ul class="price-list">
+                    <li><span>1x Savadorian Pill</span> <span>R260</span></li>
+                    <li><span>2x Savadorian Pills</span> <span>R500</span></li>
+                    <li><span>MDMA</span> <span>Available</span></li>
+                </ul>
+                <button class="add-btn">Order Party Pack</button>
+            </div>
+
+            <!-- Party Combos -->
+            <div class="product-card dark-card">
+                <h3>Party Combos </h3>
+                <p>Curated Night Out Bundles</p>
+                <ul class="price-list">
+                    <li><span>Economic Combo (1 Savadorian + 10g Premium)</span> <span>R320</span></li>
+                    <li><span>First Class Combo (2 Savadorians + 6g B Indoor)</span> <span>R700</span></li>
+                </ul>
+                <button class="add-btn">Order Combo</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 11. PACKAGES -->
+<section style="background: #000;">
+    <div class="reveal">
+        <span class="section-tag">EXCLUSIVE BULK DEALS</span>
+        <h2>Packages</h2>
+        <p class="section-sub">Custom packages also available on request</p>
+        <div class="grid">
+            <div class="product-card package-card dark-card">
+                <h3>Balrog Power Package</h3>
+                <div class="package-details">• 25g Normal Greenhouse<br>• 20g Premium Greenhouse<br>• 6g Exotic Greenhouse</div>
+                <span class="package-price">R500</span>
+                <button class="add-btn">Get Package</button>
+            </div>
+            <div class="product-card package-card dark-card">
+                <h3>Never Have I Ever Package</h3>
+                <div class="package-details">• 30g Normal Greenhouse<br>• 30g Premium Greenhouse<br>• 20g Exotic Greenhouse<br>• 2g B Grade Indoor</div>
+                <span class="package-price">R800</span>
+                <button class="add-btn">Get Package</button>
+            </div>
+            <div class="product-card package-card dark-card">
+                <h3>Officer Salary Package</h3>
+                <div class="package-details">• 50g Normal Greenhouse<br>• 50g Premium Greenhouse<br>• 20g Exotic Greenhouse<br>• 2g Indoor</div>
+                <span class="package-price">R1200</span>
+                <button class="add-btn">Get Package</button>
+            </div>
+            <div class="product-card package-card dark-card">
+                <h3>Bruce Lee Package</h3>
+                <div class="package-details">• 50g Normal Greenhouse<br>• 50g Premium Greenhouse<br>• 50g Exotic Greenhouse<br>• 5g B Grade Indoor</div>
+                <span class="package-price">R1600</span>
+                <button class="add-btn">Get Package</button>
+            </div>
+            <div class="product-card package-card dark-card">
+                <h3>Saruman Power Package</h3>
+                <div class="package-details">• 100g Normal Greenhouse<br>• 100g Premium Greenhouse<br>• 70g Exotic Greenhouse<br>• 3g Triple A Indoor</div>
+                <span class="package-price">R2600</span>
+                <button class="add-btn">Get Package</button>
+            </div>
+            <div class="product-card package-card dark-card">
+                <h3>Gandalf Power Package</h3>
+                <div class="package-details"><strong>(Platter for 4)</strong><br>• 10g Shrooms<br>• 100g Outdoor<br>• 100g Normal Greenhouse<br>• 100g Premium Greenhouse<br>• 100g Exotic Greenhouse<br>• 10g Aquaponic Greenhouse<br>• 5g B Grade Indoor</div>
+                <span class="package-price">R3600</span>
+                <button class="add-btn">Get Package</button>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; color: var(--hot-pink); font-weight: 900; letter-spacing: 1px;">
+            STRUGGLE IS AN ENEMY AND WEED IS THE REMEDY.
+        </p>
+    </div>
+</section>
+
+<section id="membership-form" class="membership-section">
+    <div class="reveal">
+        <div class="form-container">
+            <h2 style="margin-bottom: 15px; color: white;">Apply for Membership</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #ccc;">Join the inner circle for half-price delivery and exclusive access to Bulk Packages & Indoor Strains.</p>
+            <button type="button" class="add-btn" onclick="openModal()">Request Membership Card</button>
+        </div>
+    </div>
+</section>
+
+<section style="background: #050505;">
+    <div class="reveal">
+        <div class="form-container" style="border-color: var(--neon-pink);">
+            <h2 style="color: var(--neon-pink); margin-bottom: 10px;">User Reviews</h2>
+            <div id="reviewForm" style="margin-bottom: 30px;">
+                <input type="text" id="revName" placeholder="Nickname" style="width: 100%; padding: 12px; margin-bottom: 10px; background: #222; border: 1px solid #444; color: white; border-radius: 8px;">
+                <textarea id="revText" placeholder="Share your experience..." style="width: 100%; padding: 12px; background: #222; border: 1px solid #444; color: white; border-radius: 8px; min-height: 80px;"></textarea>
+                <button onclick="addReview()" class="add-btn" style="background: var(--electric-green); color: black; margin-top: 15px;">Post Review</button>
+            </div>
+            <div id="reviewsContainer"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">Outrageous Medz</div>
+    <p style="margin-top: 20px; color: #444; font-size: 0.75rem; letter-spacing: 1px;">
+        © 2026 OUTRAGEOUS MEDZ. ALL RIGHTS RESERVED. <br>
+        DISCREET DELIVERY NATIONWIDE. MEMBERSHIP REQUIRED FOR SELECT ITEMS.
+    </p>
+</footer>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <h3 style="font-family: 'Syncopate'; margin-bottom: 10px; color: var(--electric-green);">Connect</h3>
+        <p style="font-size: 0.8rem; color: #888; margin-bottom: 25px;">Choose a Budtender to place your order</p>
+        
+        <a href="https://wa.me/27643077572" class="budtender-option" target="_blank">
+            <span><span class="status-dot"></span> Kush King</span>
+            <span style="font-size: 0.8rem; color: var(--hot-pink);">064 307 7572</span>
+        </a>
+
+        <a href="https://wa.me/27634436851" class="budtender-option" target="_blank">
+            <span><span class="status-dot"></span> Bulk & Hardware Desk</span>
+            <span style="font-size: 0.8rem; color: var(--hot-pink);">063 443 6851</span>
+        </a>
+
+        <button onclick="closeModal()" style="background:none; border:none; color:#555; cursor:pointer; margin-top:20px; font-weight: bold; text-transform: uppercase;">Close</button>
+    </div>
+</div>
+
+<script>
+    // Scroll Reveal Animation Logic
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Modal Logic
+    const modal = document.getElementById("contactModal");
+    function openModal(e) { if(e) e.preventDefault(); modal.style.display = "flex"; }
+    function closeModal() { modal.style.display = "none"; }
+    window.onclick = function(event) { if (event.target == modal) closeModal(); }
+
+    // Attach modal to all "Order" buttons
+    document.querySelectorAll('.add-btn').forEach(btn => {
+        if(!btn.onclick && !btn.getAttribute('onclick')) btn.onclick = openModal;
+    });
+
+    // Review Logic
+    document.addEventListener('DOMContentLoaded', displayReviews);
+    function addReview() {
+        const name = document.getElementById('revName').value;
+        const text = document.getElementById('revText').value;
+        if (name && text) {
+            const reviews = JSON.parse(localStorage.getItem('omReviews') || '[]');
+            reviews.unshift({ name, text, date: new Date().toLocaleDateString() });
+            localStorage.setItem('omReviews', JSON.stringify(reviews));
+            document.getElementById('revName').value = '';
+            document.getElementById('revText').value = '';
+            displayReviews();
+        }
+    }
+
+    function displayReviews() {
+        const container = document.getElementById('reviewsContainer');
+        const reviews = JSON.parse(localStorage.getItem('omReviews') || '[]');
+        container.innerHTML = reviews.map(rev => `
+            <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 12px; margin-bottom: 10px; border-left: 3px solid var(--neon-pink); text-align: left;">
+                <div style="display: flex; justify-content: space-between;">
+                    <strong style="color: var(--electric-green); font-size: 0.8rem;">${rev.name}</strong>
+                    <small style="color: #444;">${rev.date}</small>
+                </div>
+                <p style="color: #ccc; font-size: 0.85rem; margin-top: 5px;">${rev.text}</p>
+            </div>
+        `).join('');
+    }
+</script>
+</body>
+</html>
